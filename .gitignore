@@ -1,6 +1,5 @@
-/vendor
-/node_modules
-/Homestead.yaml
-/Homestead.json
-/.env
-/_ide_helper.php
+node_modules
+dist
+.tmp
+.sass-cache
+bower_components
