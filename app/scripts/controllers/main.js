@@ -9,9 +9,15 @@
  */
 angular.module('nodejsApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
+    $scope.trees = [
     ];
+    $scope.addTree = function () {
+      $scope.trees.push($scope.tree);
+      $scope.tree = '';
+    };
+
+    $scope.removeTree = function (index) {
+      $scope.tree.splice(index, 1);
+    };
+
   });
