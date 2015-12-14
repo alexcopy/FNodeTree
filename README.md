@@ -1,5 +1,3 @@
-# nodejs
-
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.11.1.
 http://yeoman.io/codelab/write-unit-tests.html
