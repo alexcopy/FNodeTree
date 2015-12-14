@@ -1,0 +1,28 @@
+{
+  "name": "FNode",
+  "description": "FTree",
+  "main": "index.html",
+  "authors": [
+    "Alex Redko <redcopy@mail.ru>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/alexcopy/FNodeTree",
+  "moduleType": [
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "bootstrap": "~3.3.6",
+    "jquery": "~2.1.4"
+  }
+}

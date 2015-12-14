@@ -5,8 +5,13 @@ var db = mongojs('contactlist', ['contactlist']);
 var bodyParser = require('body-parser');
 var ServerPort = 3002;
 
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname));
 app.use(bodyParser.json());
+
+app.get('/', function (req, res) {
+  res.sendFile(__dirname + '/public/views/index.html')
+});
+
 
 app.get('/contactlist', function (req, res) {
   console.log('GET request');
