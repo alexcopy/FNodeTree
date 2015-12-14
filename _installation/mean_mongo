@@ -1,0 +1,19 @@
+How to install MongoDB: 
+
+Debian: 
+ sudo apt-get purge mongodb-org  - in case is already  installed 
+ sudo apt-get autoremove
+ sudo rm /etc/apt/sources.list.d/mongodb.list
+ echo "deb http://repo.mongodb.org/apt/debian wheezy/mongodb-org/3.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
+ sudo apt-get update 
+ sudo apt-get install -y mongodb-org
+ sudo mkdir /data/db
+ sudo mongod
+ >show dbs 
+ >use contactlist 
+ > db.contactlist.insert([
+    {name: 'Vasiliy',email: 'vas@mail.ru', number: '(435346) 34534-345345'},
+    {name: 'Petya', email: 'pet@mail.ru', number: '(12123) 45656-234234'},
+    {name: 'Kolya', email: 'kol@mail.ru', number: '(12123) 7868-6786'}
+    ])
+

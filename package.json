@@ -2,7 +2,9 @@
   "name": "nodejs",
   "version": "0.0.0",
   "dependencies": {
-    "angular-ui-sortable": "^0.13.4"
+    "angular-ui-sortable": "^0.13.4",
+    "body-parser": "^1.14.1",
+    "mongojs": "^2.2.0"
   },
   "repository": {},
   "devDependencies": {
