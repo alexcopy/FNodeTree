@@ -1,8 +1,18 @@
-var fTree = angular.module('fTree', []);
+var DEMO = angular.module('DEMO', []);
 
-fTree.controller('AppCtrl', ['$scope', '$http',
+DEMO.controller('AppCtrl', ['$scope', '$http',
   function ($scope, $http) {
     console.log("UFO Traces in Controller");
+
+    $scope.createTree = function () {
+      $http.post('/api/createTree').success(function (response) {
+        $scope.tree = response;
+        console.log(response);
+      });
+
+      console.log('create a tree controller');
+    }
+
     var refresh = function () {
       $http.get('/contactlist').success(function (response) {
         console.log('I got data requested');
@@ -10,6 +20,7 @@ fTree.controller('AppCtrl', ['$scope', '$http',
         $scope.contact = "";
       });
     };
+
     refresh();
 
     $scope.addContact = function () {
@@ -42,8 +53,7 @@ fTree.controller('AppCtrl', ['$scope', '$http',
     };
     $scope.deselectContact = function () {
       $scope.contact = "";
-    }
-
+    };
   }]);
 
 

@@ -1,0 +1,42 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/bin/npm', 'install', 'node_modules', '--save' ]
+2 info using npm@3.5.3
+3 info using node@v0.12.9
+4 verbose node symlink /usr/bin/node
+5 warn install Usage of the `--dev` option is deprecated. Use `--only=dev` instead.
+6 silly loadCurrentTree Starting
+7 silly install loadCurrentTree
+8 silly install readLocalPackageData
+9 silly fetchPackageMetaData node_modules
+10 silly fetchOtherPackageData node_modules
+11 silly cache add args [ 'node_modules', null ]
+12 verbose cache add spec node_modules
+13 silly cache add parsed spec { raw: 'node_modules',
+13 silly cache add   scope: null,
+13 silly cache add   name: null,
+13 silly cache add   rawSpec: 'node_modules',
+13 silly cache add   spec: '/home/volume1/Projects/ftree/node_modules',
+13 silly cache add   type: 'local' }
+14 error addLocal Could not install /home/volume1/Projects/ftree/node_modules
+15 silly fetchPackageMetaData Error: EISDIR, read
+15 silly fetchPackageMetaData     at Error (native)
+15 silly fetchPackageMetaData  error for node_modules { [Error: EISDIR, read] errno: -21, code: 'EISDIR' }
+16 silly rollbackFailedOptional Starting
+17 silly rollbackFailedOptional Finishing
+18 silly runTopLevelLifecycles Starting
+19 silly runTopLevelLifecycles Finishing
+20 silly install printInstalled
+21 verbose stack Error: EISDIR, read
+21 verbose stack     at Error (native)
+22 verbose cwd /home/volume1/Projects/ftree
+23 error Linux 3.16.0-4-amd64
+24 error argv "node" "/usr/bin/npm" "install" "node_modules" "--save"
+25 error node v0.12.9
+26 error npm  v3.5.3
+27 error code EISDIR
+28 error errno -21
+29 error eisdir EISDIR, read
+30 error eisdir This is most likely not a problem with npm itself
+30 error eisdir and is related to npm not being able to find a package.json in
+30 error eisdir a package you are trying to install.
+31 verbose exit [ -21, true ]
