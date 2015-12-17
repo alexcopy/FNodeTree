@@ -3,8 +3,6 @@ var contrlFolder = "/client/scripts/js";
 
 var express = require('express');
 var app = express();
-var mongojs = require('mongojs');
-var db = mongojs('contactlist', ['contactlist']);
 var bodyParser = require('body-parser');
 var fTreeController = require(__dirname + '/server/controllers/ftree-controller.js');
 var demoController = require(__dirname + '/server/controllers/demo-controller.js');
@@ -19,8 +17,7 @@ app.get('/', function (req, res) {
   res.sendFile(__dirname + "/client/views/index.html")
 });
 
-demoController.db = db;
-demoController.mongojs = mongojs;
+
 
 app.get('/contactlist', demoController.contactlistGET);
 
